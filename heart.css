@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-image:url(./champhuocback.jpg);
+    width: 5000;
+}
+
+#line path{
+    stroke-dasharray: 1564;
+    stroke-dashoffset: 1564;
+    animation: line-anim 4s linear infinite;
+}
+
+@keyframes line-anim {
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+
+#banner {
+    position: fixed;
+    top: 0;
+    left: 0; /* Align to the left side of the screen */
+    width: 100%; /* Span the entire width of the screen */
+    text-align: center; /* Center the text within the banner */
+    padding: 10px 20px; /* Add some space around the text */
+    background-color: #8b2626; /* Set a background color */
+    color: #fff; /* Set text color to white */
+    font-size: 18px; /* Adjust font size as needed */
+  }

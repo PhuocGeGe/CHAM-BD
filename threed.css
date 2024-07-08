@@ -1,0 +1,80 @@
+*
+{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+}
+body
+{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000;
+}
+.box
+{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d; 
+    animation: animate 20s linear infinite;  
+}
+@keyframes animate
+{
+    0% 
+    {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%
+    {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+.box span
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+    -webkit-box-reflect: below 0px linear-gradient(transparent,transparent,#0004);
+}
+.box span img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.centered-text
+{
+    font-size: xx-large;
+    font: bold;
+    color: rgb(210, 210, 218);
+    text-align: center;
+    text-decoration: wavy;
+    margin: 0 auto;
+}
+body{
+
+  background-image: url(https://images.pexels.com/photos/695644/pexels-photo-695644.jpeg?cs=srgb&dl=pexels-byrahul-695644.jpg&fm=jpg);  /* Replace with your image path */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  margin: 0;
+  animation: fadeInImage 2s ease-in-out;
+}
+
+@keyframes fadeInImage {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
